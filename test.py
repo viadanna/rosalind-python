@@ -1,31 +1,38 @@
 import unittest
-from main import run_dna, run_rna, run_revc, run_gc, run_hamm, run_subs
-from main import run_prot
+from problems.dna import run_dna
+from problems.rna import run_rna
+from problems.revc import run_revc
+from problems.gc import run_gc
+from problems.hamm import run_hamm
+from problems.subs import run_subs
+from problems.prot import run_prot
+from problems.fib import run_fib
+from problems.iprb import run_iprb
 
 
 class TestAlgorithms(unittest.TestCase):
 
     def test_dna(self):
-        ''' Test for http://rosalind.info/problems/dna/ '''
+        ''' http://rosalind.info/problems/dna/ '''
         data = 'AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC'
         expected = '20 12 17 21'
         self.assertEqual(run_dna(data), expected)
 
 
     def test_rna(self):
-        ''' Test for http://rosalind.info/problems/rna/ '''
+        ''' http://rosalind.info/problems/rna/ '''
         data = 'GATGGAACTTGACTACGTAAATT'
         expected = 'GAUGGAACUUGACUACGUAAAUU'
         self.assertEqual(run_rna(data), expected)
 
     def test_revc(self):
-        ''' Test for http://rosalind.info/problems/revc/ '''
+        ''' http://rosalind.info/problems/revc/ '''
         data = 'AAAACCCGGT'
         expected = 'ACCGGGTTTT'
         self.assertEqual(run_revc(data), expected)
 
     def test_gc(self):
-        ''' Test for http://rosalind.info/problems/gc/ '''
+        ''' http://rosalind.info/problems/gc/ '''
         data = '''>Rosalind_6404
 CCTGCGGAAGATCGGCACTAGAATAGCCAGAACCGTTTCTCTGAGGCTTCCGGCCTTCCC
 TCCCACTAATAATTCTGAGG
@@ -40,22 +47,36 @@ TGGGAACCTGCGGGCAGTAGGTGGAAT'''
         self.assertEqual(run_gc(data), expected)
 
     def test_hamm(self):
-        ''' Test for http://rosalind.info/problems/hamm/ '''
+        ''' http://rosalind.info/problems/hamm/ '''
         data = 'GAGCCTACTAACGGGAT\nCATCGTAATGACGGCCT'
         expected = 7
         self.assertEqual(run_hamm(data), expected)
 
     def test_subs(self):
-        ''' Test for http://rosalind.info/problems/subs/ '''
+        ''' http://rosalind.info/problems/subs/ '''
         data = 'GATATATGCATATACTT\nATAT'
         expected = '2 4 10'
         self.assertEqual(run_subs(data), expected)
 
     def test_prot(self):
-        ''' Test for http://rosalind.info/problems/prot/ '''
+        ''' http://rosalind.info/problems/prot/ '''
         data = 'AUGGCCAUGGCGCCCAGAACUGAGAUCAAUAGUACCCGUAUUAACGGGUGA'
         expected = 'MAMAPRTEINSTRING'
         self.assertEqual(run_prot(data), expected)
+
+    def test_fib(self):
+        ''' http://rosalind.info/problems/fib/ '''
+        data = '5 3'
+        expected = 19
+        self.assertEqual(run_fib(data), expected)
+
+    def test_iprb(self):
+        ''' http://rosalind.info/problems/iprb/ '''
+        data = '2 2 2'
+        expected = '0.78333'
+        self.assertEqual('{:.5f}'.format(run_iprb(data)), expected)
+
+
 
 if __name__ == '__main__':
     unittest.main()
