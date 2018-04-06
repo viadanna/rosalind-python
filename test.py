@@ -12,6 +12,7 @@ from problems.fibd import run_fibd
 from problems.mrna import run_mrna
 from problems.iev import run_iev
 from problems.cons import run_cons
+from problems.grph import run_grph
 
 
 class TestAlgorithms(unittest.TestCase):
@@ -120,6 +121,23 @@ C: 0 0 1 4 2 0 6 1
 G: 1 1 6 3 0 1 0 0
 T: 1 5 0 0 0 1 1 6'''
         self.assertEqual(run_cons(data), expected)
+
+    def test_grph(self):
+        ''' http://rosalind.info/problems/grph/ '''
+        data = '''>Rosalind_0498
+AAATAAA
+>Rosalind_2391
+AAATTTT
+>Rosalind_2323
+TTTTCCC
+>Rosalind_0442
+AAATCCC
+>Rosalind_5013
+GGGTGGG'''
+        expected = '''Rosalind_0498 Rosalind_2391
+Rosalind_0498 Rosalind_0442
+Rosalind_2391 Rosalind_2323'''
+        self.assertEqual(run_grph(data), expected)
 
 
 if __name__ == '__main__':

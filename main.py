@@ -13,6 +13,7 @@ from problems.fibd import run_fibd
 from problems.mrna import run_mrna
 from problems.iev import run_iev
 from problems.cons import run_cons
+from problems.grph import run_grph
 
 problems = {
     'dna': run_dna,
@@ -28,6 +29,7 @@ problems = {
     'mrna': run_mrna,
     'iev': run_iev,
     'cons': run_cons,
+    'grph': run_grph,
 }
 
 if __name__ == '__main__':
