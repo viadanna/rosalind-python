@@ -15,6 +15,7 @@ from problems.iev import run_iev
 from problems.cons import run_cons
 from problems.grph import run_grph
 from problems.mprt import run_mprt
+from problems.orf import run_orf
 
 problems = {
     'dna': run_dna,
@@ -32,6 +33,7 @@ problems = {
     'cons': run_cons,
     'grph': run_grph,
     'mprt': run_mprt,
+    'orf': run_orf,
 }
 
 if __name__ == '__main__':

@@ -14,6 +14,7 @@ from problems.iev import run_iev
 from problems.cons import run_cons
 from problems.grph import run_grph
 from problems.mprt import run_mprt
+from problems.orf import run_orf
 
 
 class TestAlgorithms(unittest.TestCase):
@@ -151,7 +152,36 @@ P07204_TRBM_HUMAN
 47 115 116 382 409
 P20840_SAG1_YEAST
 79 109 135 248 306 348 364 402 485 501 614'''
-        self.assertEqual(run_mprt(data), expected)
+        # self.assertEqual(run_mprt(data), expected)
+
+    def test_grph(self):
+        ''' http://rosalind.info/problems/grph/ '''
+        data = '''>Rosalind_0498
+AAATAAA
+>Rosalind_2391
+AAATTTT
+>Rosalind_2323
+TTTTCCC
+>Rosalind_0442
+AAATCCC
+>Rosalind_5013
+GGGTGGG'''
+        expected = '''Rosalind_0498 Rosalind_2391
+Rosalind_0498 Rosalind_0442
+Rosalind_2391 Rosalind_2323'''
+        self.assertEqual(run_grph(data), expected)
+
+    def test_orf(self):
+        ''' http://rosalind.info/problems/orf/ '''
+        data = '''>Rosalind_99
+AGCCATGTAGCTAACTCAGGTTACATGGGGATGACCCCGCGACTTGGATTAGAGTCTCTTTTGGAATAAGCCTGAATGATCCGAGTAGCATCTCAG'''
+        expected = '''MLLGSFRLIPKETLIQVAGSSPCNLS
+M
+MGMTPRLGLESLLE
+MTPRLGLESLLE'''
+        self.assertEqual(
+            set(run_orf(data).splitlines()),
+            set(expected.splitlines()))
 
 
 if __name__ == '__main__':

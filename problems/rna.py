@@ -26,4 +26,4 @@ from lib.sequences import DNA
 
 def run_rna(sequence):
     ''' Converts a DNA string into RNA '''
-    return DNA(sequence).to_rna()
+    return DNA(sequence).to_rna().sequence

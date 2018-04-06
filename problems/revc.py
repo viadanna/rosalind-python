@@ -26,4 +26,4 @@ from lib.sequences import DNA
 
 def run_revc(sequence):
     ''' Returns the reverse completent of a DNA sequence '''
-    return DNA(sequence).reverse_complement()
+    return DNA(sequence).reverse_complement().sequence

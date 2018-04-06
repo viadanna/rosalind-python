@@ -29,4 +29,4 @@ from lib.sequences import RNA
 def run_prot(data):
     ''' Translates mRNA string into protein string '''
     rna = RNA(data)
-    return rna.translate()
+    return rna.translate(stop=True)
