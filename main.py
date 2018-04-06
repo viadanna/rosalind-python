@@ -10,6 +10,7 @@ from problems.prot import run_prot
 from problems.fib import run_fib
 from problems.iprb import run_iprb
 from problems.fibd import run_fibd
+from problems.mrna import run_mrna
 
 problems = {
     'dna': run_dna,
@@ -22,6 +23,7 @@ problems = {
     'fib': run_fib,
     'iprb': run_iprb,
     'fibd': run_fibd,
+    'mrna': run_mrna,
 }
 
 if __name__ == '__main__':

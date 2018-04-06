@@ -9,6 +9,7 @@ from problems.prot import run_prot
 from problems.fib import run_fib
 from problems.iprb import run_iprb
 from problems.fibd import run_fibd
+from problems.mrna import run_mrna
 
 
 class TestAlgorithms(unittest.TestCase):
@@ -82,6 +83,12 @@ TGGGAACCTGCGGGCAGTAGGTGGAAT'''
         data = '6 3'
         expected = 4
         self.assertEqual(run_fibd(data), expected)
+
+    def test_mrna(self):
+        ''' http://rosalind.info/problems/mrna/ '''
+        data = 'MA'
+        expected = 12
+        self.assertEqual(run_mrna(data), expected)
 
 
 if __name__ == '__main__':
