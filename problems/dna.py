@@ -22,7 +22,7 @@ AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC
 Sample Output
 20 12 17 21
 '''
-from lib.nucleotides import DNA
+from lib.sequences import DNA
 
 
 def run_dna(sequence):

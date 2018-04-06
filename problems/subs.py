@@ -32,7 +32,7 @@ ATAT
 Sample Output
 2 4 10
 '''
-from lib.nucleotides import DNA
+from lib.sequences import DNA
 
 
 def run_subs(data):

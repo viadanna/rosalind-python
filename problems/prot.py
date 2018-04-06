@@ -23,7 +23,7 @@ AUGGCCAUGGCGCCCAGAACUGAGAUCAAUAGUACCCGUAUUAACGGGUGA
 Sample Output
 MAMAPRTEINSTRING
 '''
-from lib.nucleotides import RNA
+from lib.sequences import RNA
 
 
 def run_prot(data):

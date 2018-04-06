@@ -21,7 +21,7 @@ GATGGAACTTGACTACGTAAATT
 Sample Output
 GAUGGAACUUGACUACGUAAAUU
 '''
-from lib.nucleotides import DNA
+from lib.sequences import DNA
 
 
 def run_rna(sequence):

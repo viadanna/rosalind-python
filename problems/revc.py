@@ -21,7 +21,7 @@ AAAACCCGGT
 Sample Output
 ACCGGGTTTT
 '''
-from lib.nucleotides import DNA
+from lib.sequences import DNA
 
 
 def run_revc(sequence):

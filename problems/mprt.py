@@ -39,7 +39,7 @@ P20840_SAG1_YEAST
 '''
 from urllib import request
 from lib.fasta import read_fasta
-from lib.nucleotides import Protein
+from lib.sequences import Protein
 
 source = 'http://www.uniprot.org/uniprot/{}.fasta'
 

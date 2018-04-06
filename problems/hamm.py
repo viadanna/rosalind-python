@@ -19,7 +19,7 @@ CATCGTAATGACGGCCT
 Sample Output
 7
 '''
-from lib.nucleotides import DNA
+from lib.sequences import DNA
 
 
 def run_hamm(data):
