@@ -11,6 +11,7 @@ from problems.iprb import run_iprb
 from problems.fibd import run_fibd
 from problems.mrna import run_mrna
 from problems.iev import run_iev
+from problems.cons import run_cons
 
 
 class TestAlgorithms(unittest.TestCase):
@@ -96,6 +97,29 @@ TGGGAACCTGCGGGCAGTAGGTGGAAT'''
         data = '1 0 0 1 0 1'
         expected = 3.5
         self.assertEqual(run_iev(data), expected)
+
+    def test_cons(self):
+        ''' http://rosalind.info/problems/cons/ '''
+        data = '''>Rosalind_1
+ATCCAGCT
+>Rosalind_2
+GGGCAACT
+>Rosalind_3
+ATGGATCT
+>Rosalind_4
+AAGCAACC
+>Rosalind_5
+TTGGAACT
+>Rosalind_6
+ATGCCATT
+>Rosalind_7
+ATGGCACT'''
+        expected = '''ATGCAACT
+A: 5 1 0 0 5 5 0 0
+C: 0 0 1 4 2 0 6 1
+G: 1 1 6 3 0 1 0 0
+T: 1 5 0 0 0 1 1 6'''
+        self.assertEqual(run_cons(data), expected)
 
 
 if __name__ == '__main__':
