@@ -9,6 +9,7 @@ from problems.subs import run_subs
 from problems.prot import run_prot
 from problems.fib import run_fib
 from problems.iprb import run_iprb
+from problems.fibd import run_fibd
 
 problems = {
     'dna': run_dna,
@@ -20,6 +21,7 @@ problems = {
     'prot': run_prot,
     'fib': run_fib,
     'iprb': run_iprb,
+    'fibd': run_fibd,
 }
 
 if __name__ == '__main__':

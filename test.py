@@ -8,6 +8,7 @@ from problems.subs import run_subs
 from problems.prot import run_prot
 from problems.fib import run_fib
 from problems.iprb import run_iprb
+from problems.fibd import run_fibd
 
 
 class TestAlgorithms(unittest.TestCase):
@@ -76,6 +77,11 @@ TGGGAACCTGCGGGCAGTAGGTGGAAT'''
         expected = '0.78333'
         self.assertEqual('{:.5f}'.format(run_iprb(data)), expected)
 
+    def test_fibd(self):
+        ''' http://rosalind.info/problems/fibd/ '''
+        data = '6 3'
+        expected = 4
+        self.assertEqual(run_fibd(data), expected)
 
 
 if __name__ == '__main__':

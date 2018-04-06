@@ -41,7 +41,7 @@ Sample Output
 
 
 def run_fib(data):
-    ''' Standard Fibonacci's '''
+    ''' Fibonnacci Rabbits '''
     n, k = [int(i) for i in data.split()]
     a, b = 1, 1
     for _ in range(n-1):
