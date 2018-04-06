@@ -46,7 +46,7 @@ from lib.fasta import read_fasta
 
 
 def run_gc(fasta):
-    ''' Calculates GC content for given fasta string '''
+    ''' Returns sequence name with max GC content '''
     max_content, max_dna = 0, None
     for dna in read_fasta(fasta):
         gc = dna.gc_content()

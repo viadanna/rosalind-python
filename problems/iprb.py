@@ -47,6 +47,7 @@ Sample Output
 
 
 def run_iprb(data):
+    ''' Finds the probability of an offspring with dominant allele '''
     k, m, n = [int(i) for i in data.split()]
     r, pop = 0, sum([k, m, n])
 

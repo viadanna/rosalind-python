@@ -45,6 +45,7 @@ Sample Output
 
 
 def run_iev(couples):
+    ''' Calculates the expected number of offspring with dominant phenotype '''
     couples = [int(c) for c in couples.split()]
     offspring = 0
     for phenotype, ammount in enumerate(couples):

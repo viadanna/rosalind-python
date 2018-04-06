@@ -61,5 +61,5 @@ def run_mrna(prot, mod=1000000):
     p = 1
     for ama in prot:
         p *= amino_table[ama]
-        p %= mod
+        p %= mod  # Prevent overflow
     return p

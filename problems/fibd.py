@@ -28,7 +28,7 @@ Sample Output
 
 
 def run_fibd(data):
-    ''' Dynamic approach for rabbits '''
+    ''' Dynamic programming approach '''
     n, m = [int(i) for i in data.split()]
     # Initialize monthly counter
     p = [{
@@ -52,7 +52,7 @@ def run_fibd(data):
 
 
 def fibd(data):
-    ''' Naive approach for rabbits '''
+    ''' Naive approach '''
     n, m = [int(i) for i in data.split()]
     # Initialize monthly counter
     p = [[0]]

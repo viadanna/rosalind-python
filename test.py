@@ -13,6 +13,7 @@ from problems.mrna import run_mrna
 from problems.iev import run_iev
 from problems.cons import run_cons
 from problems.grph import run_grph
+from problems.mprt import run_mprt
 
 
 class TestAlgorithms(unittest.TestCase):
@@ -22,7 +23,6 @@ class TestAlgorithms(unittest.TestCase):
         data = 'AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC'
         expected = '20 12 17 21'
         self.assertEqual(run_dna(data), expected)
-
 
     def test_rna(self):
         ''' http://rosalind.info/problems/rna/ '''
@@ -138,6 +138,20 @@ GGGTGGG'''
 Rosalind_0498 Rosalind_0442
 Rosalind_2391 Rosalind_2323'''
         self.assertEqual(run_grph(data), expected)
+
+    def test_mprt(self):
+        ''' http://rosalind.info/problems/mprt/ '''
+        data = '''A2Z669
+B5ZC00
+P07204_TRBM_HUMAN
+P20840_SAG1_YEAST'''
+        expected = '''B5ZC00
+85 118 142 306 395
+P07204_TRBM_HUMAN
+47 115 116 382 409
+P20840_SAG1_YEAST
+79 109 135 248 306 348 364 402 485 501 614'''
+        self.assertEqual(run_mprt(data), expected)
 
 
 if __name__ == '__main__':

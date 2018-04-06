@@ -1,5 +1,6 @@
 '''
 Consensus and Profile
+http://rosalind.info/problems/cons/
 
 Problem
 
@@ -83,7 +84,7 @@ def run_cons(fasta):
                 profile.append({'A': 0, 'C': 0, 'G': 0, 'T': 0})
             profile[i][base] += 1
 
-    # Find consensus sequence and prepare output
+    # Find consensus sequence
     consensus = ""
     transpose = defaultdict(list)
     for position in profile:
@@ -95,6 +96,8 @@ def run_cons(fasta):
         consensus = "{}{}".format(
             consensus,
             best[0])
+
+    # Prepare output
     for base in 'ACGT':
         consensus = '{}\n{}: {}'.format(
             consensus,
