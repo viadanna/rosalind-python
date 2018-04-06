@@ -10,6 +10,7 @@ from problems.fib import run_fib
 from problems.iprb import run_iprb
 from problems.fibd import run_fibd
 from problems.mrna import run_mrna
+from problems.iev import run_iev
 
 
 class TestAlgorithms(unittest.TestCase):
@@ -89,6 +90,12 @@ TGGGAACCTGCGGGCAGTAGGTGGAAT'''
         data = 'MA'
         expected = 12
         self.assertEqual(run_mrna(data), expected)
+
+    def test_iev(self):
+        ''' http://rosalind.info/problems/iev/ '''
+        data = '1 0 0 1 0 1'
+        expected = 3.5
+        self.assertEqual(run_iev(data), expected)
 
 
 if __name__ == '__main__':

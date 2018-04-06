@@ -11,6 +11,7 @@ from problems.fib import run_fib
 from problems.iprb import run_iprb
 from problems.fibd import run_fibd
 from problems.mrna import run_mrna
+from problems.iev import run_iev
 
 problems = {
     'dna': run_dna,
@@ -24,6 +25,7 @@ problems = {
     'iprb': run_iprb,
     'fibd': run_fibd,
     'mrna': run_mrna,
+    'iev': run_iev,
 }
 
 if __name__ == '__main__':
